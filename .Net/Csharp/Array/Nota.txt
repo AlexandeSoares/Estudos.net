@@ -1,0 +1,13 @@
+Array: O array e uma estrutura de dados que aramazena valores do mesmo tipo, com um tamanho fixo.
+ex:
+1. int [] array = new int [4];
+2. int [] valor = new int[] {1, 4, 45, 55};
+3. string[] nomes = {"jan", "fev"};
+
+É a posição de um determinado valor de um array, sempre começando com zero
+
+Valores: 1, 4, 45, 55
+Posição  0, 1,  2,  3
+
+1. in elemento = array[0];
+2. array[0] = 1;

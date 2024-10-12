@@ -1,0 +1,7 @@
+Math.Sqrt(); = raiz quadrada
+Math.pin = numero do pin, 3.1415
+Math.Cos = coseno
+Math.Tan = tangente
+Math.Sin = seno
+dotnet new console = inicia o projeto
+dotnet new console --framework net5.0 = inicia projeto na versao desejada

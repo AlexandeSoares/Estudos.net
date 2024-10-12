@@ -1,0 +1,13 @@
+link de como criar uma chave shh
+
+https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+git remote add "url" | adiciona o programa loca ao github
+git clone "URL" | clona um projeto do github | no final depois do codigo voce pode trocar o nome se quiser
+
+git config --global user.name muda o nome de usuario global
+git config --global user.email muda o email do usuario
+
+
+
+ 
