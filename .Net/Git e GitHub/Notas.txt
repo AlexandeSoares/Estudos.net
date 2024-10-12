@@ -8,6 +8,34 @@ git clone "URL" | clona um projeto do github | no final depois do codigo voce po
 git config --global user.name muda o nome de usuario global
 git config --global user.email muda o email do usuario
 
+//
+O problema acontece pois você está tentando subir commits para um git remoto, mas existem commits que você não tem no seu repositório local. Antes de fazer o push, você precisa puxar/pull os commits de lá:
+
+git checkout <sua-branch>    # troca de branch
+git pull origin <sua-branch> # puxa as alterações da branch no remoto origin
+Se algum arquivo no remoto foi alterado por você no repositório local, você terá que resolver conflitos de merge antes de empurrar/push pro remoto.
+
+Leia com atenção: se você não quer os commits que estão no remoto, e quer sobrescrever tudo que está lá com o seu repositório local, use o comando destrutivo abaixo:
+
+git push origin <sua-branch> --force
 
 
- 
+Seu repositório local não está compatível com o repositório online.
+
+Primeiro de tudo: retire os arquivos modificados por você e coloque-os em um diretório qualquer.
+
+Depois de feito isso rode o comando:
+
+git remote update #vai atualizar os branches locais com as cópias do repositório online
+Em seguida rode:
+
+git reset upstream/master
+ou, se não funcionar com upstream , substitua por origin
+
+Pronto, seu repô está atualizado. Agora volte com os seus arquivos modificados para o diretório onde você deseja e rede o comando:
+
+git pull -r upstream master
+ou, se não funcionar com upstream , substitua por origin
+
+Isso vai trazer tudo de novo do master e colocar a sua mudança em cima. Daí é só mandar o push pro seu origin/<branchname> com --force.
+//
